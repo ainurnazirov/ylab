@@ -7,6 +7,7 @@ class Figure:
 
 
 class Circle(Figure):
+
     def area(self):
         return pi * self.a ** 2
 
@@ -91,8 +92,14 @@ class Rhombus(Figure):
 
 
 class Sphere(Circle):
+    def __init__(self, a):
+        super().__init__(a)
+
     def area(self):
         return super().area() * 4
+
+    def volume(self):
+        return self.area()/3*self.a
 
 
 class Cube(Square):
@@ -131,8 +138,8 @@ class Cube(Square):
 # print(rhombus.area())
 # print(rhombus.side())
 
-# sphere = Sphere(1)
-# print(sphere.area())
+sphere = Sphere(1)
+print(sphere.volume())
 
 # cube = Cube(1)
 # print(cube.area())

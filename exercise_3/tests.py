@@ -68,6 +68,9 @@ class TestSphere(unittest.TestCase):
     def test_area(self):
         self.assertEqual(self.sphere.area(), 12.566370614359172)
 
+    def test_volume(self):
+        self.assertEqual(self.sphere.volume(), 4.1887902047863905)
+
 class TestCube(unittest.TestCase):
     def setUp(self):
         self.cube = Cube(1)

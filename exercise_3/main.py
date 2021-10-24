@@ -21,23 +21,23 @@ while start:
         a = int(input(
             'Программа поддерживает вычисления площади и диаметра круга.\nДля получения результатов введите радиус '
             'круга:\n'))
-        figure = Circle(a)
-        print(f'Площадь фигуры: {figure.area()}\nДиаметр круга: {figure.diameter()}')
+        circle = Circle(a)
+        print(f'Площадь фигуры: {circle.area()}\nДиаметр круга: {circle.diameter()}')
         start = start_choice()
     elif choice == '2':
         a = int(input(
             'Программа поддерживает вычисления площади и диагонали квадрата.\nДля получения результатов введите '
             'сторону квадрата:\n'))
-        figure = Square(a)
-        print(f'Площадь фигуры: {figure.area()}\nДиагональ квадрата: {figure.diagonal()}')
+        square = Square(a)
+        print(f'Площадь фигуры: {square.area()}\nДиагональ квадрата: {square.diagonal()}')
         start = start_choice()
     elif choice == '3':
         a = int(input(
             'Программа поддерживает вычисления площади и диагонали прямоугольника.\nДля получения результатов введите '
             'сначала первую сторону прямоугольника:\n'))
         b = int(input('Затем вторую:\n'))
-        figure = Rectangle(a, b)
-        print(f'Площадь фигуры: {figure.area()}\nДиагональ прямоугольника: {figure.diagonal()}')
+        rectangle = Rectangle(a, b)
+        print(f'Площадь фигуры: {rectangle.area()}\nДиагональ прямоугольника: {rectangle.diagonal()}')
         start = start_choice()
     elif choice == '4':
         a = int(input(
@@ -45,8 +45,8 @@ while start:
             'сначала первую сторону треугольника:\n'))
         b = int(input('Вторую:\n'))
         c = int(input('И третью:\n'))
-        figure = Triangle(a, b, c)
-        print(f'Площадь фигуры: {figure.area()}\nМедианы треугольника: {figure.medians()}')
+        triangle = Triangle(a, b, c)
+        print(f'Площадь фигуры: {triangle.area()}\nМедианы треугольника: {triangle.medians()}')
         start = start_choice()
     elif choice == '5':
         a = int(input(
@@ -55,28 +55,28 @@ while start:
         b = int(input('Одну боковую сторону:\n'))
         c = int(input('Нижнее основание:\n'))
         d = int(input('Вторую боковую сторону:\n'))
-        figure = Trapezoid(a, b, c, d)
-        print(f'Площадь фигуры: {figure.area()}\nСредняя линия трапеции: {figure.middle_line()}')
+        trapezoid = Trapezoid(a, b, c, d)
+        print(f'Площадь фигуры: {trapezoid.area()}\nСредняя линия трапеции: {trapezoid.middle_line()}')
         start = start_choice()
     elif choice == '6':
         a = int(input(
             'Программа поддерживает вычисления площади и стороны ромба.\nДля получения результатов введите сначала '
             'первую диагональ ромба:\n'))
         b = int(input('Затем вторую:\n'))
-        figure = Rhombus(a, b)
-        print(f'Площадь фигуры: {figure.area()}\nСторона ромба: {figure.side()}')
+        rhombus = Rhombus(a, b)
+        print(f'Площадь фигуры: {rhombus.area()}\nСторона ромба: {rhombus.side()}')
         start = start_choice()
     elif choice == '7':
         a = int(input(
-            'Программа поддерживает вычисления площади поверхности сферы.\nДля получения результатов введите радиус '
+            'Программа поддерживает вычисления площади и объема сферы.\nДля получения результатов введите радиус '
             'сферы:\n'))
-        figure = Sphere(a)
-        print(f'Площадь фигуры: {figure.area()}')
+        sphere = Sphere(a)
+        print(f'Площадь фигуры: {sphere.area()}\nОбъем сферы: {sphere.volume()}')
         start = start_choice()
     elif choice == '8':
         a = int(input(
             'Программа поддерживает вычисления площади поверхности куба.\nДля получения результатов введите сторону '
             'куба:\n'))
-        figure = Cube(a)
-        print(f'Площадь фигуры: {figure.area()}')
+        cube = Cube(a)
+        print(f'Площадь фигуры: {cube.area()}')
         start = start_choice()
