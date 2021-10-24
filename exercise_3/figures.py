@@ -103,8 +103,14 @@ class Sphere(Circle):
 
 
 class Cube(Square):
+    def __init__(self, a):
+        super().__init__(a)
+
     def area(self):
         return super().area() * 6
+
+    def volume(self):
+        return self.a ** 3
 
 
 # class Parallelepiped(Rectangle, Phombus )
@@ -138,8 +144,8 @@ class Cube(Square):
 # print(rhombus.area())
 # print(rhombus.side())
 
-sphere = Sphere(1)
-print(sphere.volume())
+# sphere = Cube(2)
+# print(sphere.volume())
 
 # cube = Cube(1)
 # print(cube.area())
