@@ -1,5 +1,5 @@
 import unittest
-from figures import Circle, Square, Rectangle, Triangle, Trapezoid, Rhombus, Sphere, Cube
+from figures import *
 
 class TestCircle(unittest.TestCase):
     def setUp(self):
@@ -29,7 +29,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.rectangle.area(), 2)
 
     def test_diagonal(self):
-        self.assertEqual(self.rectangle.diagonal(), 2.449489742783178)
+        self.assertEqual(self.rectangle.diagonal(), 2.23606797749979)
 
 class TestTriangle(unittest.TestCase):
     def setUp(self):
@@ -80,3 +80,43 @@ class TestCube(unittest.TestCase):
 
     def test_volume(self):
         self.assertEqual(self.cube.volume(), 1)
+
+class TestParallelepiped(unittest.TestCase):
+    def setUp(self):
+        self.parallelepiped = Parallelepiped(1, 1, 1)
+
+    def test_area(self):
+        self.assertEqual(self.parallelepiped.area(), 6)
+
+    def test_volume(self):
+        self.assertEqual(self.parallelepiped.volume(), 1)
+
+class TestPyramid(unittest.TestCase):
+    def setUp(self):
+        self.pyramid = Pyramid(1, 1, 1)
+
+    def test_area(self):
+        self.assertEqual(self.pyramid.area(), 2.732050807568877)
+
+    def test_volume(self):
+        self.assertEqual(self.pyramid.volume(), 0.2357022603955158)
+
+class TestCylinder(unittest.TestCase):
+    def setUp(self):
+        self.cylinder = Cylinder(1, 1)
+
+    def test_area(self):
+        self.assertEqual(self.cylinder.area(), 12.566370614359172)
+
+    def test_volume(self):
+        self.assertEqual(self.cylinder.volume(), 3.141592653589793)
+
+class TestCone(unittest.TestCase):
+    def setUp(self):
+        self.cone = Cone(1, 1)
+
+    def test_area(self):
+        self.assertEqual(self.cone.area(), 13.011197054679151)
+
+    def test_volume(self):
+        self.assertEqual(self.cone.volume(), 1.0471975511965976)
